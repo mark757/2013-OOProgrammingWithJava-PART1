@@ -32,4 +32,44 @@ public class MyDate {
         return false;
     }
 
+    public void advance() {
+
+        if (this.day < 30) {
+            this.day++;
+        } else {
+            this.day = 1;
+
+            if (this.month < 12){
+                this.month++;
+
+        } else {
+            this.month = 1;
+                this.year++;
+          }
+
+        }
+    }
+
+    public void advance(int numberOfDays){
+        int counter = 0;
+
+        while (numberOfDays > counter){
+            advance();
+            //System.out.println(this.day);
+            counter++;
+        }
+    }
+
+    public MyDate afterNumberOfDays(int days){
+        MyDate newMyDate = new MyDate(this.day, this.month, this.year);
+
+
+
+        newMyDate.advance(days);
+
+
+        return newMyDate;
+
+    }
+
 }
