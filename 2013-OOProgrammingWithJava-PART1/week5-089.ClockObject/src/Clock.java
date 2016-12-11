@@ -1,5 +1,3 @@
-import java.util.Calendar;
-
 public class Clock {
     private BoundedCounter hours;
     private BoundedCounter minutes;
@@ -23,16 +21,16 @@ public class Clock {
         // Clock advances by one second
         this.seconds.next();
 
-        if (this.seconds.getValue() == 0){
+        if (this.seconds.getValue() == 0) {
             this.minutes.next();
 
-                if (this.minutes.getValue() == 0){
-                    this.hours.next();
-                }
+            if (this.minutes.getValue() == 0) {
+                this.hours.next();
+            }
         }
 
     }
-    
+
     public String toString() {
         // returns the string representation
         return hours + ":" + minutes + ":" + seconds;
