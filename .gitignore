@@ -1,9 +1,0 @@
-#JAVA-OOPProgramming
-*.iml
-build.xml
-build_errors.txt
-build_log.txt
-manifest.mf
-.idea
-lib
-nbproject
